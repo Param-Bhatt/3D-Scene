@@ -1,3 +1,4 @@
+
 void changeSize(int w, int h) {
 
 	// Prevent a divide by zero, when window is too short
