@@ -1,24 +1,25 @@
+/*To maintain our aspect ratio of the scene when the window size is changed*/
 void changeSize(int w, int h) {
 
-	// Prevent a divide by zero, when window is too short
-	// (you cant make a window of zero width).
+	/* Prevent a divide by zero, when window is too short
+	 (you cant make a window of zero width).*/
 	if (h == 0)
 		h = 1;
 
 	float ratio = w * 1.0 / h;
 
-	// Use the Projection Matrix
+	/* Use the Projection Matrix */
 	glMatrixMode(GL_PROJECTION);
 
-	// Reset Matrix
+	/* Reset Matrix */
 	glLoadIdentity();
 
-	// Set the viewport to be the entire window
+	/* Set the viewport to be the entire window */
 	glViewport(0, 0, w, h);
 
-	// Set the correct perspective.
+	/* Set the correct perspective. */
 	gluPerspective(45, ratio, 1, 100);
 
-	// Get Back to the Modelview
+	/* Get Back to the Modelview*/
 	glMatrixMode(GL_MODELVIEW);
 }
