@@ -1,26 +1,18 @@
 #pragma once
+/* a single file for storing all the variables*/
 long int ptr = 0;
 int loop = 0;
-float arr[10000000][3];
+float arr[100000][3];		//array to store the vertices of the 3D object
 // actual vector representing the camera's direction
-float lx = 0.0f, ly = 0.0f, lz = -1.0f;
+float lx = 0.0f, ly = 0.0f, lz = -1.0f;	
 // XZ position of the camera
-float x = 0.0f, y = 0, z = 5.0f;
-float deltaAngle = 0.0f;
+float x = 0.0f, y = 1.0, z = 5.0f;
+float deltax = 0.0f, deltay = 0.0f, deltaz = 0.0f, deltaAngle = 0.0f;
 float anglep[10] = { 0.f };
-float deltaMove = 0;
-float zoom = 1.0f;
-float random[17];
-int refreshMills = 15;
-float angle = 0.f;
+float zoom = 1.0f;	//default zoom. to increase or decrease, use page up or page down button
+float random[17];	//for drawing asteroids/comets , generate an array of randomized values and then choose
+float initAngle = 160;
+float angle = initAngle; //setting up the intitial rotation angle ( for yaw )
 int xOrigin = -1;
-bool flag = false;
-GLfloat AmbientLight[] = { 0.3,0.3,0.3,1.0 };                  //Initialization values for lighting
-GLfloat DiffuseLight[] = { 0.8,0.8,0.8,1.0 };
-GLfloat SpecularLight[] = { 1.0,1.0,1.0,1.0 };
-GLfloat SpecRef[] = { 0.7,0.7,0.7,1.0 };
-GLfloat LightPos[] = { -50.0,50.0,100.0,1.0 };
-GLint Shine = 128;
-GLint walkX = 0, walkY = 0, lookX = 0, lookY = 0;
-GLint world = 1, oldX = -1, oldY = -1;
-GLint doll = -1;
+float roll = 0.0f;	//to set the angle for roll	 
+float pitch = 0.0f;	//to set the angle for pitch

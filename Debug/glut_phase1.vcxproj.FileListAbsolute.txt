@@ -1,0 +1,2 @@
+C:\Users\PARAM BHATT\Desktop\opengl\glut_phase1\Debug\glut_phase1.exe
+C:\Users\PARAM BHATT\Desktop\opengl\glut_phase1\Debug\glut_phase1.pdb
